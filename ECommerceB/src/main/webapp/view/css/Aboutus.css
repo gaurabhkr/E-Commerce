@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+body {
+  min-height: 100vh;
+  background-color: #212121;
+  background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" fill="%23212121"/><circle cx="20" cy="20" r="18" fill="%23333333" fill-opacity="0.13"/><circle cx="20" cy="20" r="8" fill="%23333333" fill-opacity="0.13"/></svg>');
+  background-repeat: repeat;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fafafa;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* --- wise-bat-13 loader (top of page) --- */
+.loader-bat {
+  margin: 0 auto 32px auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00d8ff 0%, #007bff 100%);
+  position: relative;
+  animation: bat-spin 1.3s linear infinite;
+  box-shadow: 0 0 32px #00d8ff44;
+}
+@keyframes bat-spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+.loader-bat::before,
+.loader-bat::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: #212121;
+}
+.loader-bat::before {
+  width: 40px;
+  height: 40px;
+  left: 20px;
+  top: 20px;
+}
+.loader-bat::after {
+  width: 20px;
+  height: 20px;
+  left: 30px;
+  top: 30px;
+}
+
+/* --- About Us Title --- */
+.about-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 32px;
+  color: #00d8ff;
+  text-shadow: 0 2px 12px #00d8ff55;
+}
+
+/* --- About Sections Layout --- */
+.about-sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* --- cuddly-catfish-6 card style --- */
+.about-card {
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px #00000022;
+  padding: 32px 28px;
+  min-width: 290px;
+  max-width: 340px;
+  flex: 1 1 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1.5px solid #333;
+  position: relative;
+}
+.about-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 40px #00d8ff33;
+  border-color: #00d8ff;
+}
+.about-card-content {
+  width: 100%;
+  text-align: center;
+}
+.about-card h2 {
+  color: #00d8ff;
+  margin-bottom: 14px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.about-card p {
+  color: #e0e0e0;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+/* --- brave-earwig-75 social/site buttons --- */
+.social-buttons {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-top: 18px;
+}
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #232526;
+  color: #00d8ff;
+  border: 2px solid #00d8ff;
+  border-radius: 24px;
+  padding: 9px 22px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 12px #00d8ff22;
+}
+.social-btn i {
+  font-size: 1.2rem;
+}
+.social-btn.github:hover {
+  background: #24292f;
+  color: #fff;
+  border-color: #fff;
+}
+.social-btn.linkedin:hover {
+  background: #0a66c2;
+  color: #fff;
+  border-color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .about-sections {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .about-card {
+    max-width: 95vw;
+  }
+}
+@media (max-width: 600px) {
+  .about-title {
+    font-size: 2rem;
+  }
+  .about-card {
+    padding: 22px 8px;
+  }
+}
+    
